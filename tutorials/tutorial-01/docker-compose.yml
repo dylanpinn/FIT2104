@@ -6,4 +6,14 @@ services:
     - "80:80"
     volumes:
     - .:/var/www/html
+    links:
+      - db
+  db:
+    image: mysql
+    volumes:
+      - db_data:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: password
 
+volumes:
+  db_data: {}
