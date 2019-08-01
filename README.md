@@ -1,8 +1,8 @@
-# FIT2104: Web database interface 
+# FIT2104: Web database interface
 
 ## Lectures
 
-- [Lecture 1](/lecture/lecture-01.md)
+- [Lecture 1](/lectures/lecture-01.md)
 
 ## Tutorials
 
