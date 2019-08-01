@@ -2,6 +2,7 @@
 
 ## Lectures
 
+- [Lecture 1](/lecture/lecture-01.md)
 
 ## Tutorials
 
