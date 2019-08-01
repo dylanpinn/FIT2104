@@ -33,7 +33,8 @@
     - Price alterations can be immediately updated on the website.
     - Sales via the web site can be immediately reflected in inventory levels.
     - The website can be personalised for clients when the log in.
-- Content Management Systems (CMS) / blogs etc. are heavily used and popular examples of web database applications.
+- Content Management Systems (CMS) / blogs etc. are heavily used and popular
+  examples of web database applications.
 
 ## Web database technologies
 
@@ -41,32 +42,40 @@
   - Static Generation
     - static, mainly text, some images, required "experts" to maintain them.
   - Dynamic - Generation 1
-    - Technologies such as JavaScript and VBScript allowed dynamic "client side" functionality.
+    - Technologies such as JavaScript and VBScript allowed dynamic "client side"
+      functionality.
     - Different browsers tended to implement the scripts differently.
   - Dynamic - Generation 2
     - First generation of server-side scripting
-    - CGI (Common Gateway Interface - 1993) scripts which executed on the web server
+    - CGI (Common Gateway Interface - 1993) scripts which executed on the web
+      server
       - Often using Cookies to overcome statelessness of the web.
     - Problems
-      - Required a programming language which has good communication facilities such as C, C++, Perl or Python.
-      - Scalability - CGI spawned a separate process on the web server for each request it received.
+      - Required a programming language which has good communication facilities
+        such as C, C++, Perl or Python.
+      - Scalability - CGI spawned a separate process on the web server for each
+        request it received.
   - Dynamic - Generation 3
     - Microsoft released ASP (Active Server Pages) in 1996 (became .NET in 2002)
     - Several competitors were created:
       - ColdFusion - 1996
-      - Sun released Java Servlets (1997) and then JSP (1999) and then JEE (1999).
+      - Sun released Java Servlets (1997) and then JSP (1999) and then JEE
+        (1999).
     - PHP became publicly available in 1998
       - Server-side scripting language.
 
 ## Uses for server-side technologies
 
 - Two most common uses
-  - Retrieving data from a data store, in response to a query and inserting it into a web page.
-  - Handling POST form input and writing it to storage, e.g. database, file system or retrieving data from storage and displaying in a web page.
+  - Retrieving data from a data store, in response to a query and inserting it
+    into a web page.
+  - Handling POST form input and writing it to storage, e.g. database, file
+    system or retrieving data from storage and displaying in a web page.
 
 ## Web database technologies
 
-- The web server passes control to another processes (PHP engine), creates the HTML and passes it back to the web server, which sends it back to the browser.
+- The web server passes control to another processes (PHP engine), creates the
+  HTML and passes it back to the web server, which sends it back to the browser.
 - Benefits
   - Universal browser readability
   - User platform independence
