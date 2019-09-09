@@ -7,3 +7,6 @@
 [submodule "tutorials/tutorial-06"]
 	path = tutorials/tutorial-06
 	url = https://git.infotech.monash.edu/FIT2104-24160547/tut6.git
+[submodule "tutorials/tutorial-07"]
+	path = tutorials/tutorial-07
+	url = https://git.infotech.monash.edu/FIT2104-24160547/tut7.git
