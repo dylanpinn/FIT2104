@@ -1,0 +1,20 @@
+{
+  "name": "fit2104/assignment-2",
+  "description": "FIT2104 - 2019 S2 - Assignment 2",
+  "type": "project",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Dylan Pinn",
+      "email": "dcpin3@student.monash.edu"
+    },
+    {
+      "name": "Yuqi Ma",
+      "email": "ymaa0027@student.monash.edu"
+    }
+  ],
+  "require": {
+    "tecnickcom/tcpdf": "^6.3",
+    "ext-pdo": "*"
+  }
+}

@@ -1,0 +1,77 @@
+<div class="container">
+  <div class="table-heading-row">
+    <h1>New Client</h1>
+  </div>
+
+  <form method="post" data-behaviour="disable-submit">
+    <div class="form-group">
+      <div class="form-row">
+        <div class="col">
+          <label for="first_name">First Name</label>
+          <input type="text" name="first_name" id="first_name" class="form-control" required>
+        </div>
+        <div class="col">
+          <label for="last_name">Last Name</label>
+          <input type="text" name="last_name" id="last_name" class="form-control" required>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="mobile">Mobile Number</label>
+      <input type="tel" name="mobile" id="mobile" class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="email">Email Address</label>
+      <input type="email" name="email" id="email" class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="mail_list">Do you wanna receive our news? </label>
+      <select class="form-control" id="mail_list" name="mail_list" style="width:200px;" required>
+        <option value="">Please Select</option>
+        <option value="Y">Yes</option>
+        <option value="N">No</option>
+      </select>
+    </div>
+    <div class="table-heading-row">
+      <h3>Address Information</h3>
+    </div>
+    <div class="form-group">
+      <div class="form-row">
+        <div class="col">
+          <label for="street">Street</label>
+          <input type="text" name="street" id="street" class="form-control">
+        </div>
+        <div class="col">
+          <label for="suburb">Suburb</label>
+          <input type="text" name="suburb" id="suburb" class="form-control">
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="form-row">
+        <div class="col">
+          <label for="state">State</label>
+          <select class="form-control" id="state" name="state" style="width:200px;">
+            <option value="">Please Select</option>
+            <option value="VIC">Victoria</option>
+            <option value="ACT">A.C.T</option>
+            <option value="NSW">NSW</option>
+            <option value="QLD">Queensland</option>
+            <option value="NT">NT</option>
+            <option value="SA">South Australia</option>
+            <option value="WA">Western Australia</option>
+            <option value="TAS">Tasmania</option>
+          </select>
+        </div>
+        <div class="col">
+          <label for="postcode">Postcode</label>
+          <input type="text" name="postcode" id="postcode" class="form-control" maxlength="4" minlength="3">
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <button type="submit" class="btn btn-primary" data-behaviour="disable-on-submit">Add</button>
+    </div>
+  </form>
+</div>

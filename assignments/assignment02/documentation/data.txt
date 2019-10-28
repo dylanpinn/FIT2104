@@ -1,0 +1,63 @@
+Category
+
+1	Bag
+2	Toys
+3	Stationery
+4	Basket
+5	Coffee Mug
+6	Decoration
+7	Map
+8	Pen
+9	Wall Hanging
+10	Food
+12	Clothes
+19	Art
+20	House Item
+
+Client
+
+6	Dan	Ali	Happy Rd	Morfi	3001	WA	0421122778	dan@example.com	N
+13	Dan	Ali	Happy Rd	Morfi	3000	QLD	421122778	Dan@gmail.com	Y
+14	Zoe	Li	Bork Rd	Trivea	4056	SA	030000000	zoe@example.com	Y
+16	Katy	K	Blackburn Rd	Clayton	3168	NSW	000144232	cam@example.com	Y
+20	Dylan	Pinn	123 Main Street	Melbourne	3000	VIC	040000000	dcpin3@student.monash.edu	Y
+21	Moby	Dick	123 Ahab Street	Atlantic Ocean	489	SA	040000000	dcpin3+1@student.monash.edu	Y
+22	Rocky	Balboa	5 Main Street	Philedelpia	0482	TAS		rocky@example.com	Y
+23	Maria	Quigly	125 First Street	Kew	3010	VIC		maria.q@example.com	N
+24	Catalina	Portabello	214 Nicholson St	Footscray	3011	VIC	04929292929	cata@example.com	Y
+25	Erin	Leach	8 Nyora Street	Malvern	3000	VIC		erin@example.com	Y
+
+Product
+
+1	Pen	UK	3.00	101.00	Black pen
+2	T-shirt	UK	5.00	20.00	black T-shirt
+16	Rug	Pakistan	99.00	180.00	Pakistani rug
+17	Mug	Iraq	2.50	100.00	Iraqi mug
+38	Hand made pencil bag	Brazil	5.00	10.00	Hand made pencil case from Brazil
+39	Knitted Jumper	Peru	24.00	60.00	A handmade knitted jumper from Peru.
+45	Wooden train set	New Zealand	8.85	19.95	Hand made wooden train set.
+46	Original Painting	South Africa	99.00	400.00	Original painting from South Africa
+47	"Ancient" Map	Iraq	5.00	19.95	Replica ancient map of the middle east.
+48	Linen T-Shirt	Sri Lanka	5.00	15.00	Linen T-Shirt
+49	Sombrero	Mexico	10.00	20.00
+50	Ushanka	Russia	15.00	45.00	Russian Fur Hat
+51	Reed Diffuser	Australia	5.00	15.00	Pack of 5 scented reed difuser
+52	Soap	Wales	4.50	15.95
+53	Sandal	Greece	38.50	99.00	Greek handmade leather sandal
+54	Scarf	India	4.50	29.00	Indian handwoven cotton scarf
+55	Tote Bag	Cambodia	4.00	15.00	Calico tote/book bag
+56	Wooden train set accessories	Tibet	20.00	49.00	Accessories for wooden train set
+57	Screen Print	Kenya	14.00	39.00	Assorted screen prints
+58	Moses Baby Bassinet basket	Kenya	49.00	129.00	Handwoven reed basked for newborn children
+
+Project
+
+2	2019-11-03	Sudan Hospitals	build hospitals	South Sudan	15000	Kerma
+3	2020-01-01	Build Well in Afghanistan 	Build a well in Afghanistan	Aghanistan	1000	Kabul
+5	2019-12-20	Goats for the Congo	Aid for villages around the capital Kinshasa	Democratic Republic of Congo	1000	Kinshasa
+6	2021-12-12	Kenyan Orphan Development Program	Pay for eduction for orphans.	Kenya	15000	Nairobi
+7	2020-06-01	Immunisation Project	Immunisation against preventable diseases 	Vietnam	2000	Ho Chi Minh City
+8	2020-02-01	Food bank	Food bank for the homeless	United States	500	San Fransisco
+9	2021-06-01	Habitat for Humanity	Help build houses for the disadvantaged	Albania	4000	Tirana
+10	2020-03-01	Medical Supplies for Refugees	Medical aid for Syrian refugees	Syria	4000
+11	2020-01-01	Safe drinking water	Safe drinking water	Lybia	1000	

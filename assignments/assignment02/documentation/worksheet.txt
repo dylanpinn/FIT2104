@@ -1,0 +1,19 @@
+Dylan Pinn:
+    Add CSS Framework,JQuery
+    Create Menu
+    Create product page
+    Create display code
+    Add edit product price page
+    Create images page
+    Add PDF download to client listing
+    Block page if the user did not login successfully
+
+
+Yuqi Ma:
+    Create PHP database connection file
+    Create DB Schema
+    Create login page
+    Create category page
+    Create client page
+    Create project page
+    Add product categories to products
