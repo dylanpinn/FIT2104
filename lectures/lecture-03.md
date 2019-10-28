@@ -275,10 +275,11 @@ h1 {
 <div class="col-md-2">Smallest Column</div>
 ```
 
-- Navigation
-  - A standard navigation bar is created with the `.navbar` class, followed by a
-    responsive collapsing class `.navbar-expand-xl|lg|md|sm` which will stack
-    the navbar vertically if required
+### Navigation
+
+- A standard navigation bar is created with the `.navbar` class, followed by a
+  responsive collapsing class `.navbar-expand-xl|lg|md|sm` which will stack the
+  navbar vertically if required
 
 ```html
 <nav class="navbar navbar-expand-sm bg-dark">...</nav>
@@ -305,4 +306,133 @@ h1 {
     </li>
   </ul>
 </nav>
+```
+
+- A navigation bar can extend or collapse, depending on screen size
+- Often referred to as the "hamburger" menu.
+
+```html
+<button
+  type="button"
+  class="navbar-toggle"
+  data-toggle="collapse"
+  data-target="#myNavbar"
+>
+  <span class="navbar-toggler-icon"></span>
+</button>
+```
+
+- Indicates the id of the element that will affected when the button is clicked
+
+```html
+<div class="collapse navbar-collapse" id="myNavbar"></div>
+```
+
+```html
+<nav class="navbar navbar-expand-md bg-light navbar-light">
+  <!– Toggler button -->
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#myNavBar"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <!– Navigation Links -->
+  <div class="collapse navbar-collapse" id="myNavBar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="#">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Menu 1</a>
+      </li>
+      other menu links
+    </ul>
+  </div>
+</nav>
+```
+
+- A navigation aspect which is growing in popularity is the idea of a "fixed"
+  navigation bar.
+- When the user scrolls down a page, the navigation bar remains anchored, so
+  that it always visible and therefore, usable
+- Change this line:
+
+```html
+<nav class="navbar navbar-expand-md bg-light navbar-light"></nav>
+```
+
+- To this
+
+```html
+<nav class="navbar navbar-expand-md bg-light navbar-light fixed-top"></nav>
+```
+
+- We can also add a "brand" to our navbar
+
+```html
+<nav class="navbar navbar-expand-sm bg-light navbar-light">
+  <a class="navbar-brand" href="#">Famox</a>
+</nav>
+```
+
+## jQuery
+
+- Free, open source collection of JS libraries designed to allow for ease of use
+  for things such as:
+  - Modifying the appearance of a web page after it has been rendered
+  - Providing special effects such as hiding, fading, sliding and animations of
+    various types
+  - Allowing the retrieval of information from a server and updating parts of a
+    web page without refreshing the entire web page (AJAX)
+  - Simplifying common JavaScript tasks
+  - We've already got a link to the latest jQuery version (or we could download
+    it from https://jquery.com/download/
+
+```html
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3. 3.1/jquery.min.js"></script>
+```
+
+- Uses the DOM – Document Object Model which is created when the browser loads
+  and finished processing a HTML document
+- Hierarchical model where the JS Objects represent each element in the
+  document, e.g. `html, head, body, title, table, tr, etc`
+  - We can programatically engage with and change these elements via their id or
+    their type
+- Access to jQuery is through the `$(...)function` short hand for the jQuery
+  function
+- Pass the document object (web page) to the function and call the ready method
+  which means once the HTML document is fully loaded our jQuery functions can be
+  executed
+
+#### Examples
+
+##### Table rows striped
+
+```javascript
+$(document).ready(function() {
+  $('#data tbody tr:even').addClass('listeven');
+});
+```
+
+- Load JS file in HTML
+
+```html
+<script src="/js/my-script.js" type="text/javascript"></script>
+```
+
+##### Add class on table hover
+
+```javascript
+$(document).ready(function() {
+  $('#data tbody tr:even').addClass('listeven');
+  $('#data tbody tr').mouseover(function() {
+    $(this).addClass('data-hover');
+  });
+  $('#data tbody tr').mouseout(function() {
+    $(this).removeClass('data-hover');
+  });
+});
 ```
