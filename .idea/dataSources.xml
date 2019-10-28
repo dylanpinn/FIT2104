@@ -2,9 +2,9 @@
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
     <data-source source="LOCAL" name="FIT2104" uuid="3f6da288-0210-4e42-a2b1-e7ccc8113307">
-      <driver-ref>mysql</driver-ref>
+      <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
-      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://130.194.7.82:3306/s24160547</jdbc-url>
       <driver-properties>
         <property name="autoReconnect" value="true" />
