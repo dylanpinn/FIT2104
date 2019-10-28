@@ -27,7 +27,9 @@
 - Often over used in web site design.
 - Colour theory is a scientific theory which explains why the human brain finds
   some colour combinations more appealing than others.
+
   ![](https://i.loli.net/2019/10/28/a8SW3MrPZYmxKHq.png)
+
   - Monochromatic
     - Variations in hue and saturation of a single colour
   - Analagous
@@ -38,6 +40,7 @@
     - Intrinsically high contrast
     - Not good for text, e.g. red text on green background.
   - Colours chosen form equidistant areas on the wheel tend to look together.
+
 - Pick a dominant colour (or possibly two) and use accents in a complementary
   colour.
 - The colour scheme should apply to images as well and will give the site a well
