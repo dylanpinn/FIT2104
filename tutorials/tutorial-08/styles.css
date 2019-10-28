@@ -1,0 +1,17 @@
+body {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+table.bordered {
+  border-collapse: collapse;
+}
+
+table.bordered td {
+  border: 1px solid black;
+}
+
+table.bordered th {
+  border: 1px solid black;
+}
+
