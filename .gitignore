@@ -87,3 +87,4 @@ fabric.properties
 .DS_Store
 node_modules/
 vendor/
+build
