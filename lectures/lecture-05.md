@@ -174,7 +174,7 @@ $conn->close();
 
 ### Oracle
 
-#### Examples
+#### Connection to Oracle
 
 - Create a table and populate it with some data
 
@@ -223,3 +223,173 @@ $conn->close();
   identifier if the query is valid and false if not.
 - Takes 2 parameters - a connection identifier and a query or a variable which
   holds a query.
+- `oci_execute` takes a previously parsed statement with a statement identifier
+  as an argument.
+  - Returns true on success and false on failure
+
+#### Data Display Option 1
+
+```php
+<?php
+while (oci_fetch($stmt))
+{
+?>
+  <tr>
+    <td><?php echo oci_result($stmt, 1); ?></td>
+    <td><?php echo oci_result($stmt, 2); ?></td>
+    <td><?php echo oci_result($stmt, 3); ?></td>
+    <td><?php echo oci_result($stmt, 4); ?></td>
+    <td><?php echo oci_result($stmt, 5); ?></td>
+  </tr>
+<?php
+}
+?>
+```
+
+- `oci_fetch` fetches the next row into an internal results buffer
+  - Takes a statement id as an argument and returns true on success and false on
+    failure
+- `oci_result` takes a statement id and returns data from a field in the current
+  row that has been retrieved by `oci_fetch`
+
+```php
+<?php echo oci_result($stmt, 1); ?>
+```
+
+- The attributes which are retrieving can be displayed via their ordinal number
+  or by their column name
+
+```php
+<?php echo oci_result($stmt, "CUST_NO"); ?>
+```
+
+- The attributes **MUST** be specified in uppercase for an Oracle database.
+
+#### Data Display Option 2
+
+- The `oci_fetch_array` function returns the next row from the results dataset
+  as an associative (using attribute names) or a numeric array or both
+
+```php
+while ($row = oci_fetch_array($stmt)) {
+  echo "<tr>";
+  echo "<td>$row[0]</td>";
+  echo "<td>$row[1]</td>";
+  echo "<td>$row[2]</td>";
+  echo "<td>$row[3]</td>";
+  echo "<td>$row[4]</td>";
+  echo "</tr>";
+}
+```
+
+- The results are returned into the `$row` array until there are no more rows.
+- The array elements are then accessed by their ordinal number or by their
+  column name
+
+  ```php
+  echo "<td>$row[CUST_NO]</td>;
+  ```
+
+#### Close data source
+
+```php
+<?php
+oci_free_statement($stmt);
+oci_close($conn);
+?>
+```
+
+- Functionality the same as the MySQL implementation.
+
+## Data Access Layers
+
+- The previous examples show that we need to use the `mysql` functions access a
+  MySQL database and `oci` functions to access Oracle.
+- This means the application is bound to a particular database and is therefore
+  quite difficult to change to another database.
+- To get around this we can create a Database Abstraction Layer which decouples
+  the application logic from the code that talks to the database.
+
+## PDO - MySQL
+
+- Many programmers created their own DAL and PHP decided to build this
+  functionality with PHP Data Objects.
+- There are still different drivers for each database types and we will need to
+  enable these via the `php.ini` file.
+- For a MySQL connection
+
+  ```php
+  $dbh = new PDO('mysq:host=localhost;dbname=name', 'user', 'pass');
+  $stmt = $dbh->prepare("SELECT * FROM Customer");
+  $stmt->execute();
+  ```
+
+- Create a new PDO object using 3 arguments in the constructor
+  - Uses object notation
+- `prepare` method performs much the same purpose as `oci_parse`
+- The SQL statement is executed
+- We can then loop through the result set using the `fetch` method
+
+  ```php
+  <?php while ($row = $stmt->fetch()): ?>
+    <tr>
+      <td><?php echo $row["cust_no"]; ?></td>
+      <td><?php echo $row["firstname"]; ?></td>
+      <td><?php echo $row["surname"]; ?></td>
+      <td><?php echo $row["address"]; ?></td>
+      <td><?php echo $row["contact"]; ?></td>
+    </tr>
+  <?php
+  endwhile;
+  $stmt->closeCursor();
+  ?>
+  ```
+
+  - Free up the resources using `closeCursor`.
+
+## PDO
+
+- The only database specific piece of code is the PDO constructor
+
+  ```php
+  $dbh = new PDO('mysq:host=localhost;dbname=name', 'user', 'pass');
+  ```
+
+- If we wanted to connect to an Oracle database we would only need to change
+
+  ```php
+  $dbh = new PDO('oci:dbname=FIT2104', 'user', 'pass');
+  ```
+
+### Use of a connection file
+
+- In order to make our applications as flexible and scalable as possible it
+  would be best to write the DB connection code once and include it in each file
+
+  ```php
+  <?php
+  $host = "host";
+  $u_name = "username";
+  $password = "password";
+  $db = "FIT2104";
+  $dsn = "mysql:host=$host;dbname=$db";
+  $conn = new PDO($dsn, $u_name, $password);
+  ?>
+  ```
+
+- This file is saved as `connection.php` or similar.
+- This can then be included on any page
+
+  ```php
+  include("connection.php");
+  // Rest of the code
+  ```
+
+## What we have covered
+
+- Connecting to datastores
+  - MySQL
+  - Oracle
+  - PDO
+    - MySQL
+    - Oracle
