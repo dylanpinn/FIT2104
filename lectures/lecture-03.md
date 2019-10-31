@@ -28,7 +28,7 @@
 - Colour theory is a scientific theory which explains why the human brain finds
   some colour combinations more appealing than others.
 
-  ![](https://i.loli.net/2019/10/28/a8SW3MrPZYmxKHq.png)
+  ![](https://i.loli.net/2019/10/28/a8SW3MrPZYmxKHq.png){width=50%}
 
   - Monochromatic
     - Variations in hue and saturation of a single colour
@@ -36,7 +36,7 @@
     - Colours adjacent to each other on the wheel.
     - Often found in the nature and tend to be pleasing to the eye.
   - Complementary
-    - 180$\degree$ opposite each other on the wheel.
+    - 180$^{\circ}$ opposite each other on the wheel.
     - Intrinsically high contrast
     - Not good for text, e.g. red text on green background.
   - Colours chosen form equidistant areas on the wheel tend to look together.
@@ -205,9 +205,9 @@ h1 {
   tag in the HTML document.
 
 ```html
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/.../jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/.../popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/.../bootstrap.min.js"></script>
 ```
 
 - Bootstrap is designed to be responsive to mobile devices
@@ -330,7 +330,7 @@ h1 {
 
 ```html
 <nav class="navbar navbar-expand-md bg-light navbar-light">
-  <!– Toggler button -->
+  <!-- Toggler button -->
   <button
     class="navbar-toggler"
     type="button"
@@ -339,7 +339,7 @@ h1 {
   >
     <span class="navbar-toggler-icon"></span>
   </button>
-  <!– Navigation Links -->
+  <!-- Navigation Links -->
   <div class="collapse navbar-collapse" id="myNavBar">
     <ul class="navbar-nav">
       <li class="nav-item">
@@ -392,7 +392,7 @@ h1 {
     it from https://jquery.com/download/
 
 ```html
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3. 3.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/.../jquery.min.js"></script>
 ```
 
 - Uses the DOM – Document Object Model which is created when the browser loads
